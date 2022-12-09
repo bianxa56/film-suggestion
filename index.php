@@ -1,7 +1,6 @@
 <?php
-    $GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . '/api/server';
-    include($ROOT . '/repository/user-repository.php');
-    require_once($ROOT . '/model/user.php');
+    $GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . '/api/film_suggestion';
+    require_once($ROOT . '/service/user-service.php');
 
     $user = new User();
     $user -> setUsername('chika09');
@@ -9,5 +8,6 @@
     $user -> setFirstName('Chika');
     $user -> setLastName('Fujiwara');
     $status = createUser($user);
-    echo $user -> getUsername();
+
+    echo $status;
 ?>

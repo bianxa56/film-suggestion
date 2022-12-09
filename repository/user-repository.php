@@ -4,7 +4,7 @@ require_once($ROOT . '/model/user.php');
 
 $conn = getDb();
 
-function createUser(User $user) {
+function insertUser(User $user) {
     $sql = "INSERT INTO user (username, password, first_name, last_name) VALUES (?, ?, ?, ?)";
     global $conn;
     $stmt= $conn->prepare($sql);
