@@ -9,6 +9,5 @@
     $user -> setFirstName('Chika');
     $user -> setLastName('Fujiwara');
     $status = createUser($user);
-
     echo $user -> getUsername();
 ?>
