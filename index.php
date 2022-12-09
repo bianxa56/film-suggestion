@@ -10,6 +10,5 @@
     $user -> setLastName('Fujiwara');
     $status = createUser($user);
 
-    // echo $status;
     echo $user -> getUsername();
 ?>
