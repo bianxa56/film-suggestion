@@ -1,47 +1,24 @@
 <?php
+$GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . '/api/film_suggestion/server';
+require_once($ROOT . '/model/user.php');
+require_once($ROOT . '/service/user-service.php');
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
-$data = array(
-    array(
-    'id' => '1',
-    'name' => 'Bandung'
-    ),
-    array(
-    'id' => '2',
-    'name' => 'Jakarta'
-    ),
-    array(
-    'id' => '3',
-    'name' => 'Surabaya'
-    ),
-    );
-
-    if(!empty($_POST['name']) && !empty($_POST['id'])) {
-        // New Data Input
-        $newdata = array(
-        'id' => $_POST['id'],
-        'name' => $_POST['name']
-        );
-        // Add Data
-        $data[] = $newdata;
-        // New Data
-        foreach($data as $d) {
-        $result['city'][] = array(
-        'id' => $d['id'],
-        'name' => $d['name'],
-        );
-        }
-        $result['status'] = 'success';
-        } else {
-        foreach($data as $d) {
-        $result['city'][] = array(
-        'id' => $d['id'],
-        'name' => $d['name'],
-        );
-        }
-        $result['status'] = 'success';
-        }
+$data = json_decode(file_get_contents("php://input"));
+$user = new User();
+$user -> setUsername($data -> username);
+$user -> setPassword($data -> password);
+$user -> setFirstName($data -> firstName);
+$user -> setLastName($data -> lastName);
+createUser($user);
+echo $user -> getUsername();
+echo $user -> getPassword();
+echo $user -> getFirstName();
+echo $user -> getLastName();
+http_response_code(200);         
+echo json_encode("hello world");
 ?>

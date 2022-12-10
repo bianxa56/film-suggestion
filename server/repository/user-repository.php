@@ -15,6 +15,5 @@ function insertUser(User $user) {
     $lastName = $user -> getLastName();
     $stmt -> bind_param("ssss", $username, $password, $firstName, $lastName);
     $stmt -> execute();
-
 }
 ?>
