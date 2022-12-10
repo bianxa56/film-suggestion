@@ -8,6 +8,5 @@
     $user -> setFirstName('Chika');
     $user -> setLastName('Fujiwara');
     $status = createUser($user);
-
     echo $status;
 ?>
