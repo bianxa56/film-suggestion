@@ -3,7 +3,7 @@ require_once($ROOT . '/repository/film-repository.php');
 require_once($ROOT . '/model/film.php');
 
 function searchFilmsByGenre($genre) {
-    $response = findFilmsByGenre("Sci-fi/Adventure");
+    $response = findFilmsByGenre("Romance");
 
     $films = [];
     foreach($response as $row):

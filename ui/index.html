@@ -1,8 +1,20 @@
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
         <title>Homepage</title>
     </head>
     <body>
-        <h1>hello world</h1>
+        <form action="#">
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre">
+              <option value="horror">Horror</option>
+              <option value="romance">Romance</option>
+              <option value="Sci-fi/Adventure">Sci-fi/Adventure</option>
+              
+            </select>
+            <button type="button" id="submit">Submit</button>
+      </form>
     </body>
+    <script src="axios.min.js"></script>
+    <script src="index.js"></script>
 </html>
