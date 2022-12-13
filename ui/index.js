@@ -12,9 +12,14 @@ async function onSubmitClick() {
     }
     response = await axios.get(url, {params})
     console.log(response.data)
+    var table = document.getElementById("film");
+    var rowCount = table.rows.length;
+    for (var i = 1; i < rowCount; i++) {
+        table.deleteRow(1);
+    }
     for (var i = 0; i < response.data.length; i++) {
         film = response.data[i];
-        var table = document.getElementById("film");
+        
         var row = table.insertRow(i+1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
