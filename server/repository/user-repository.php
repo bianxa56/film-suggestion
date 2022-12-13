@@ -16,4 +16,16 @@ function insertUser(User $user) {
     $stmt -> bind_param("ssss", $username, $password, $firstName, $lastName);
     $stmt -> execute();
 }
+
+function findUser($username) {
+    $sql = "SELECT * FROM user WHERE username = ?";
+    global $conn;
+    $stmt= $conn->prepare($sql);
+
+    $stmt -> bind_param("s", $username);
+    $stmt -> execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+    return $user;
+}
 ?>
