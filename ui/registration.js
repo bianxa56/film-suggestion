@@ -1,7 +1,7 @@
 btnSubmit = document.getElementById("btn-submit")
 btnSubmit.addEventListener("click", onSubmitClick);
 
-function onSubmitClick() {
+async function onSubmitClick() {
     username = document.getElementById("txt-username").value
     password = document.getElementById("txt-password").value
     firstName = document.getElementById("txt-firstname").value
@@ -12,5 +12,6 @@ function onSubmitClick() {
     }
     console.log(request)
     url = '/api/film_suggestion/server/resource/registration-resource.php'
-    axios.post(url, request)
+    response = await axios.post(url, request)
+    alert(response.data)
 }

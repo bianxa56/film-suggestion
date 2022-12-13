@@ -11,5 +11,8 @@ async function onSubmitClick() {
     console.log(request)
     url = '/api/film_suggestion/server/resource/login-resource.php'
     response = await axios.post(url, request)
-    alert(response.data)
+    if (response.data == "OK")
+        window.location.replace("/api/film_suggestion/ui/index.html")
+    else
+        alert(response.data)
 }
