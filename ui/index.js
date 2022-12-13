@@ -12,6 +12,18 @@ async function onSubmitClick() {
     }
     response = await axios.get(url, {params})
     console.log(response.data)
+    for (var i = 0; i < response.data.length; i++) {
+        film = response.data[i];
+        var table = document.getElementById("film");
+        var row = table.insertRow(i+1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
 
-}  
+        cell1.innerHTML = film.name;
+        cell2.innerHTML = film.year;
+        cell3.innerHTML = film.length;
+    }      
+    }
+    
 
