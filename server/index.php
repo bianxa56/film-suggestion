@@ -1,7 +1,9 @@
 <?php
     $GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . '/api/film_suggestion/server';
-    require_once($ROOT . '/service/user-service.php');
+    require_once($ROOT . '/repository/film-repository.php');
 
-    $response = authenticateUser("chika09", "12345");
-    echo $response;
+    $response = findFilmsByGenre("Sci-fi/Adventure");
+    foreach($response as $row):
+        echo implode(" ", $row);
+    endforeach
 ?>

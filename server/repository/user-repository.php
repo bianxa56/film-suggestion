@@ -7,7 +7,7 @@ $conn = getDb();
 function insertUser(User $user) {
     $sql = "INSERT INTO user (username, password, first_name, last_name) VALUES (?, ?, ?, ?)";
     global $conn;
-    $stmt= $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);
 
     $username = $user -> getUsername();
     $password = $user -> getPassword();
