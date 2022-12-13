@@ -1,7 +1,7 @@
 <?php
     $GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . '/api/film_suggestion/server';
-    require_once($ROOT . '/repository/user-repository.php');
+    require_once($ROOT . '/service/user-service.php');
 
-    $user = findUser("chika09");
-    echo $user["first_name"]
+    $response = authenticateUser("chika09", "12345");
+    echo $response;
 ?>
