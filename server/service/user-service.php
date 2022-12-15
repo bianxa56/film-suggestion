@@ -6,8 +6,8 @@ function createUser(User $user) {
   insertUser($user);
 }
 
-function authenticateUser($username, $password) {
-  $user = findUser($username);
+function authenticateUser($email, $password) {
+  $user = findUser($email);
   if (is_null($user)) {
     return "User does not exist.";
   }

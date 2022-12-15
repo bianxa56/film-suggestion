@@ -16,4 +16,5 @@ function findFilmsByGenre($genre) {
     $film = $result -> fetch_all(MYSQLI_ASSOC);
     return $film;
 }
+
 ?>

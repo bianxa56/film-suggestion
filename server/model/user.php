@@ -1,28 +1,12 @@
 <?php
 class User {
 
-  public $username;
-  public $password;
   public $firstName;
   public $lastName;
+  public $email;
+  public $password;
 
-//   username
-  public function setUsername($username) {
-    $this->username = $username;
-  }
-  public function getUsername() {
-    return $this->username;
-  }
-  
-// password
-  function setPassword($password) {
-    $this->password = $password;
-  }
-  function getPassword() {
-    return $this->password;
-  }
-
-//N
+  //firstName
   function setFirstName($firstName) {
     $this->firstName = $firstName;
   }
@@ -37,5 +21,22 @@ class User {
   function getLastName() {
     return $this->lastName;
   }
+
+//   email
+  public function setEmail($email) {
+    $this->email = $email;
+  }
+  public function getEmail() {
+    return $this->email;
+  }
+  
+// password
+  function setPassword($password) {
+    $this->password = $password;
+  }
+  function getPassword() {
+    return $this->password;
+  }
+
 }
 ?>
