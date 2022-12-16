@@ -1,31 +1,42 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
         <title>Homepage</title>
     </head>
     <body>
-        <form action="#">
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre">
+      <!-- nav bar -->
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <form>
+            <select class="form-select" name="genre" id="genre">
+              <option selected>Open this select menu</option>
+              <option value="Action">Action</option>
+              <option value="Drama">Drama</option>
               <option value="Horror">Horror</option>
               <option value="Romance">Romance</option>
               <option value="Sci-fi/Adventure">Sci-fi/Adventure</option>
               <option value="Fantasy">Fantasy</option>
-              
             </select>
             <button type="button" id="submit">Submit</button>
-        </form>
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
 
-      <table id="film">
+    <table id="film" class="table table-dark">
+      <thead>
         <tr>
-          <th>Name</th>
-          <th>Year</th>
-          <th>Length</th>
+          <th scope="col-4">Name</th>
+          <th scope="col-2" style="width:40%">Synopsis</th>
+          <th scope="col-4">Year</th>
+          <th scope="col-4">Length</th>
         </tr>
+      </thead>
+    </table>
 
-        <tbody id="tbody"></tbody>
-        
-      </table>
     </body>
     <script src="axios.min.js"></script>
     <script src="index.js"></script>

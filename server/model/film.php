@@ -2,6 +2,7 @@
 class Film {
 
   public $name;
+  public $synopsis;
   public $genre;
   public $year;
   public $length;
@@ -11,6 +12,13 @@ class Film {
   }
   public function getName() {
     return $this->name;
+  }
+
+  public function setSynopsis($synopsis) {
+    $this->synopsis = $synopsis;
+  }
+  public function getSynopsis() {
+    return $this->synopsis;
   }
 
   public function setGenre($genre) {

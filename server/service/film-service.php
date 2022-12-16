@@ -9,6 +9,7 @@ function searchFilmsByGenre($genre) {
     foreach($response as $row):
         $film = new Film();
         $film -> setName($row["name"]);
+        $film -> setSynopsis($row["synopsis"]);
         $film -> setGenre($row["genre"]);
         $film -> setYear($row["year"]);
         $film -> setLength($row["length"]);

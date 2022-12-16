@@ -11,6 +11,7 @@ async function onSubmitClick() {
         firstName, lastName, email, password
     }
     console.log(request)
+    JSON.stringify(request)
     url = '/api/film_suggestion/server/resource/registration-resource.php'
     response = await axios.post(url, request)
     alert(response.data)
