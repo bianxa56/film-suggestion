@@ -4,23 +4,41 @@
         <link rel="stylesheet" href="bootstrap.min.css">
         <title>Homepage</title>
     </head>
-    <body>
+    <body >
+      <div class="p-3 mb-2 bg-dark text-white">
       <!-- nav bar -->
-
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <h1>FILM SUGGESTION</h1>
+        </div>
+      </div>
+    </nav>
       <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <form>
-            <select class="form-select" name="genre" id="genre">
-              <option selected>Open this select menu</option>
-              <option value="Action">Action</option>
-              <option value="Drama">Drama</option>
-              <option value="Horror">Horror</option>
-              <option value="Romance">Romance</option>
-              <option value="Sci-fi/Adventure">Sci-fi/Adventure</option>
-              <option value="Fantasy">Fantasy</option>
-            </select>
-            <button type="button" id="submit">Submit</button>
+          <form class="row">
+            <div class="col-md-8">
+              <select class="form-select form-select-lg mb-3" name="genre" id="genre" aria-label=".form-select-lg example">
+              <!-- <select class="form-select" name="genre" id="genre"> -->
+                <option selected>Select genre</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-fi/Adventure">Sci-fi/Adventure</option>
+                <option value="Fantasy">Fantasy</option>
+              </select>
+            </div>
+            
+            <div class="col-md-4">
+              <button type="button" class="btn btn-primary btn-lg" id="submit">Submit</button>
+              <!-- <button type="button" id="submit">Submit</button> -->
+            </div>
+            
           </form>
         </div>
         <div class="col-md-4"></div>
@@ -29,14 +47,14 @@
     <table id="film" class="table table-dark">
       <thead>
         <tr>
-          <th scope="col-4">Name</th>
-          <th scope="col-2" style="width:40%">Synopsis</th>
+          <th scope="col-2">Name</th>
+          <th scope="col-4" style="width:60%">Synopsis</th>
           <th scope="col-4">Year</th>
           <th scope="col-4">Length</th>
         </tr>
       </thead>
     </table>
-
+  </div>
     </body>
     <script src="axios.min.js"></script>
     <script src="index.js"></script>

@@ -1,6 +1,13 @@
+.navbar-nav
+{
+  margin-left: 50px;
+  color: white;
+}
+
 .row
 {
-  background-color: aqua;
+  padding-top: 20px;
+  background-color:black;
 }
 
 span { 
@@ -10,8 +17,19 @@ span {
 }
 
 td {
-  /* height: 50px; */
+  height: 70px;
   vertical-align: middle;
 }
 
-/* nav bar */
+#film
+{
+  color: white ;
+}
+
+
+body
+{
+  background: #000;
+  font-size: larger;
+}
+
